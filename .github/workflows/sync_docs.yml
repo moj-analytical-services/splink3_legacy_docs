@@ -19,6 +19,7 @@ jobs:
       - name: Fetch splink repository
         run: |
           git clone --depth 1 --branch splink3 https://github.com/moj-analytical-services/splink.git splink
+          mkdir -p splinkdocs
           cp -r splink/docs/* splinkdocs/
           rm -rf splink
 
