@@ -14,9 +14,9 @@ jobs:
     steps:
       - name: Clone splink repository
         run: |
-          git clone --depth 1 --branch master https://github.com/moj-analytical-services/splink.git splink
-          cp -r splink/* .
-          rm -rf splink
+          git clone --depth 1 --branch master https://github.com/moj-analytical-services/splink.git splink_temp
+          cp -r splink_temp/* .
+          rm -rf splink_temp
 
       #----------------------------------------------
       #  -- save a few section by caching poetry --
