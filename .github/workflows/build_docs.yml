@@ -91,6 +91,12 @@ jobs:
           path: docs/includes/generated_files
 
       - run: tree docs/
+      - name: Clone splink repository
+        run: |
+          git clone --depth 1 --branch master https://github.com/moj-analytical-services/splink.git splink_temp
+          cp -r splink_temp/* .
+          rm -rf splink_temp
+
       - name: install docs dependencies
         run: |
           pip install --upgrade pip
